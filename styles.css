@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    background-color: #97b2bd;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pannel{
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#p-top{
+    background-color: #284c5a;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.elem {
+    flex-basis: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 0 4px;
+}
+
+.elem-box {
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #193945;
+}
+
+#p-bottom{
+    padding: 10px;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bubble{
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    background-color: #2b4d5b;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.bubble:hover{
+    background-color: #112a34;
+    cursor: pointer;
+}
+
+#gameover {
+    width:100%;
+    height: 100%;
+    background-color: #00000086;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+
+#gameover-pannel{
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #193945;
+    font-size: 20px;
+}
+
+#gameover-pannel h5 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#gameover-btn {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 300;
+    background-color: #224856;
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.5s ease;
+}
+
+#gameover-btn:hover{
+    background-color: #0c2a35;
+}
