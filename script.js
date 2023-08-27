@@ -1,14 +1,9 @@
-let timerVal = 60;
+let timerVal = 6;
 let score = 0;
-let highestScore = 0;
+let highestScore = localStorage.getItem('highscore')?localStorage.getItem('highscore'):0;
 let hitval = document.getElementById("hitval");
 let endscore = document.querySelector("#gameover span");
 let gameoverPannel = document.getElementById("gameover-pannel");
-
-function highestScrHandler() {
-    highestScore = localStorage.getItem('highscore');
-    document.getElementById('highestscr').innerHTML = `Highest score: ${highestScore}`;
-}
 
 function bubbleCreate() {
     let bubbleCode = "";
@@ -28,6 +23,9 @@ function timeCount() {
     let timerInt = setInterval(() => {
         if (timerVal >= 0) {
             timer.textContent = timerVal--;
+            if(timerVal === 4) {
+                document.getElementById('beep').src = "mixkit-system-beep-buzzer-fail-2964.wav";
+            } 
         } else {
             clearInterval(timerInt);
             if (score >= highestScore) {
@@ -36,8 +34,10 @@ function timeCount() {
                 gameoverPannel.innerHTML = `<p>It's highest score!:${highestScore}<p>
                 <input type = 'text' placeholder = 'Enter your name'/>
                 <a id = "reset-btn" href = "index.html"> Save </a>`;
+                document.getElementById('beep').src = "";
             } else {
                 endscore.textContent = `score: ${score}`
+                document.getElementById('beep').src = "";
             }
             document.getElementById("gameover").style.visibility = 'visible';
         }
@@ -56,8 +56,6 @@ function bubbleHitHandler() {
 timeCount();
 bubbleCreate();
 setHitValue();
-
-// highestScrHandler();
 
 let bubbles = document.querySelectorAll('.bubble');
 

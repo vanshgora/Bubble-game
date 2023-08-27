@@ -10,9 +10,12 @@
     <main>
         <h1 class="primary-text">BUBBLING GAME</h1>
         <p id="highestscr"></p>
+        <script>
+            let highestScore = localStorage.getItem('highscore')?localStorage.getItem('highscore'):0;
+            document.getElementById('highestscr').textContent = `Highest score: ${highestScore}`;
+        </script>
         <a class="main-btn" href="game.html">Start Game</a>
         <!-- <a class="main-btn" href="">Top 5 Highest Scores</a> -->
     </main>
 </body>
-<script src="script.js"></script>
 </html>

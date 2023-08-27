@@ -52,6 +52,11 @@ main .main-btn:hover {
     border-color: #fff;
 }
 
+#highestscr {
+    color: #fff;
+    font-size: 25px;
+}
+
 #pannel{
     width: 80%;
     height: 80%;
